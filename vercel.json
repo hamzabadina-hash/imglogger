@@ -13,12 +13,3 @@
     }
   ]
 }
-```
-
-Your root should look like this after the fix:
-```
-📁 api/
-   └── main.py
-📄 README.md
-📄 requirements.txt
-📄 vercel.json   ← must be HERE
